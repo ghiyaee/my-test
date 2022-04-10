@@ -1,4 +1,5 @@
-import React from "react";
+
+import React ,{useState }from "react";
 const Loader = (props) => {
     return (
         <div className="ui active dimmer">
@@ -11,5 +12,6 @@ const Loader = (props) => {
 Loader.defaultProps = {
      message:'Please awite a request'
 }
+
 
 export default Loader;
