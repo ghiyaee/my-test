@@ -1,4 +1,3 @@
-// import { render } from "@testing-library/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
@@ -11,9 +10,8 @@ class App extends React.Component {
             err => this.setState({err:err.message})
         )
     }
-
-    render()
-    {
+    renders() {
+      
         if (this.state.err && !this.state.lat) {
             return   <h1>Error {this.state.err }</h1>  
         }
@@ -21,8 +19,13 @@ class App extends React.Component {
             return <SeasonDisplay  lat={this.state.lat }/>
         }
     
-       return <Loader/>
+         return <Loader/>
+    
+ }
+    render() {
+        return <div style={{border:'3px solid black'}}>{this.renders()}</div>
     }
+   
 }
 
 ReactDOM.render(<App/>,document.querySelector('#root'))

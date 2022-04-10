@@ -1,6 +1,6 @@
 import React from "react";
 import './SeasonDisplay.css'
-
+import Timer from "./Timer";
 const confinge = {
    summer: {text:'IS HEHR SUMMER',iconName:'sun'},
    winter:{text:'IS HEHR WINTER',iconName:'snowflake'}
@@ -21,6 +21,7 @@ const SeasonDisplay = (props) => {
       <div className={`season-display ${season}`} >
          <i className={`icone-left massive ${iconName} icon`} />
          <h1>{text}</h1>
+          <Timer/>
          <i className={`icone-right massive ${iconName} icon`} />
       </div>
    );
