@@ -7,7 +7,7 @@ class Timer extends React.Component{
         },1000)
     };
     render() {
-        return <h1>--{this.state.time }</h1>
+        return <h1>{this.state.time }</h1>
     };
 };
 export default Timer;
